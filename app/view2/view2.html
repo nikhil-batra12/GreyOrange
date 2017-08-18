@@ -1,0 +1,6 @@
+<input type="text" placeholder="Search Planets Here" ng-model="searchText" ng-model-options="{debounce: 1000, updateOn: blur}"></input>
+<div ng-repeat="planet in planets | orderBy: '-population'">
+	<span>{{planet.name}}</span>
+	<span>{{planet.population}}</span>
+</div>
+
