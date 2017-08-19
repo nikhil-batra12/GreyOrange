@@ -6,6 +6,7 @@ var planetController = require('./server/controllers/planetController');
 var path = require('path');
 var bodyParser = require('body-parser');
 
+var port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
@@ -21,6 +22,6 @@ app.get('/api/planets/getMoreResults/:nextUrl', planetController.getNextSearchRe
 
 app.use(express.static(path.normalize(__dirname + '/client')));
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log('Example app listening on port 3000!')
 })
