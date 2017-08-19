@@ -5,7 +5,7 @@ html, body{
 }
 
 body{
-	background: url(/img/bgsw.jpg) center center no-repeat;
+	background: url(/img/bgsw.jpg) center center repeat;
   overflow: auto;
 }
 .page-container{
@@ -63,9 +63,27 @@ body{
     padding-top: 10px;
 }
 
-.planet-container{
+.planet-container, .planet-result{
     border: 1px solid white;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     background-color: rgba(0,0,0,0.6);
+    padding: 0;
+}
+
+.planet-container{
+    margin-top: 25px;
+}
+
+.planet-result{
+  text-align: center;
+}
+.planet-container input{
+  color: black;
+}
+.get-more-results{
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  color: lightgreen;
 }

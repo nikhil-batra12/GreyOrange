@@ -1,8 +1,16 @@
-<div class="planet-container">
-	<input type="text" placeholder="Search Planets Here" ng-model="searchText" ng-model-options="{debounce: 1000, updateOn: blur}" search-items></input>
-	<div ng-repeat="planet in planets" ng-style="{'width' : (100-$index) + '%'}" class="planet-container">
-		<span>{{planet.name}}</span>
-		<span>{{planet.population}}</span>
-	</div>
+<div class="planet-container col-xs-12">
+	<span class="col-xs-6">Search your Planet Soldier</span>
+	<input type="text" class="col-sm-6" placeholder="Search Planets Here" ng-model="searchText" ng-model-options="{debounce: 1000, updateOn: blur}" search-items></input>
 </div>
-
+<div class="results-count planet-result" ng-show="planets.length && searched">
+	<span>{{resultCount }} results found.</span>
+</div>
+<div class="results-count planet-result" ng-show="!searched && searchText">
+	<span>Searching Results....</span>
+</div>
+<div ng-repeat="planet in planets |customSorter:'population'"" ng-style="{'width' : (100-$index) + '%', 'margin' :'0 ' + $index/2 + '%'}" class="planet-result" ng-show="planets">
+	<span>{{planet.name}}</span>
+	<span>{{planet.population}}</span>
+</div>
+<div ng-show="!planets.length && searchText && searched" class="planet-result">No such planet in Star Wars Universe</div>
+<div ng-show="nextItem && searchText" class="get-more-results" ng-click="getMorResults()">Get More Search Results</div>
