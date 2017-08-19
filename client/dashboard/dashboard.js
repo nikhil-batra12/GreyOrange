@@ -1,22 +1,21 @@
 'use strict';
 
-angular.module('myApp.view2', ['ui.router'])
+angular.module('myApp.dashboard', ['ui.router'])
 
 .config(['$stateProvider', function($stateProvider) {
   $stateProvider
-        .state('view2', {
-		    templateUrl: 'view2/view2.html',
-		    controller: 'View2Ctrl',
-		    url: '/view2'
+        .state('dashboard', {
+		    templateUrl: 'dashboard/dashboard.html',
+		    controller: 'dashboardCtrl',
+		    url: '/dashboard'
 		  });
 }])
 
 
-.controller('View2Ctrl', ['$scope', 'searchService', function($scope, searchService) {
+.controller('dashboardCtrl', ['$scope', 'searchService', function($scope, searchService) {
 	$scope.searchResults = function(){
 		$scope.searched = false;
 		searchService.getSearchResults($scope.searchText).then(function(response){
-			console.log(response.data.results)
 			$scope.resultCount = response.data.count;
 			$scope.planets = response.data.results;
 			$scope.nextItem = response.data.next;
@@ -45,16 +44,10 @@ angular.module('myApp.view2', ['ui.router'])
 		        	scope.planets = [];
 		        	return 0;
 		        }
-		        
-		        // if searchStr is still the same..
-		        // go ahead and retrieve the data
-		        if (text === scope.searchText)
-		        {
+		        if (text === scope.searchText){
 		        	scope.searchResults();
 		        }
-
 			});
-
 	    }
 	}
 	 	
@@ -64,24 +57,14 @@ angular.module('myApp.view2', ['ui.router'])
 	var factory = {};
 
 	factory.getSearchResults = function(text) {
-		var url = "https://swapi.co/api/planets/?search=";
-		return $http.get(url + text);
-	}
-
-	factory.getMoreResults = function(url){
+		var url = "/api/planets/" + encodeURIComponent(text);
 		return $http.get(url);
 	}
-	return factory;
-}])
 
-.factory('throttleService', ['$http', function($http) {
-	var factory = {};
-
-	factory.getSearchResults = function(text) {
-		var url = "https://swapi.co/api/planets/?search=";
-		return $http.get(url + text);
+	factory.getMoreResults = function(searchUrl){
+		var url = "/api/planets/getMoreResults/" + encodeURIComponent(searchUrl);
+		return $http.get(url);
 	}
-
 	return factory;
 }])
 

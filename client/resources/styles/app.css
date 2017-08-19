@@ -5,7 +5,7 @@ html, body{
 }
 
 body{
-	background: url(/img/bgsw.jpg) center center repeat;
+	background: url(../img/background-star-wars.jpg) center center repeat;
   overflow: auto;
 }
 .page-container{

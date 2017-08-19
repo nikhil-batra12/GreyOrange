@@ -3,12 +3,12 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ui.router',
-  'myApp.view1',
-  'myApp.view2'
+  'myApp.login',
+  'myApp.dashboard'
 ]).
 config(['$urlRouterProvider', function($urlRouterProvider) {
   $urlRouterProvider.otherwise(function($injector){
-        $injector.get("$state").go('view1');  
+        $injector.get("$state").go('login');  
         return true;
     });
 }]);
