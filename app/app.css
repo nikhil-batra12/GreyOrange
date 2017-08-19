@@ -6,28 +6,66 @@ html, body{
 
 body{
 	background: url(/img/bgsw.jpg) center center no-repeat;
+  overflow: auto;
+}
+.page-container{
+    margin-left: 0;
+}
+.login-form-container{
+    margin-top: 15%;
 }
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+@media screen and (min-width : 768px) and (max-width: 1024px) and (orientation: portrait){
+    .login-form-container{
+        margin-top: 30%;
+    }
 }
 
-.menu:before {
-  content: "[";
+.content-container{
+    background-color: rgba(0,0,0,0.6);
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
 }
 
-.menu:after {
-  content: "]";
+.login-form-container h1{
+    color: #fff;
+    text-align: center;
 }
 
-.menu > li {
-  display: inline;
+
+.login-form-container input{
+    margin: 10px 0 0 0;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.login-form-container .required-validation-message{
+    color: red;
+    display: block;
+    margin: 5px 0 0 10px;
+}
+
+#submitButton{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.username-container, .password-container{
+    padding-bottom: 5px;
+}
+
+.invalidCredential{
+    color: red;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.planet-container{
+    border: 1px solid white;
+    color: white;
+    font-size: 40px;
+    background-color: rgba(0,0,0,0.6);
 }
