@@ -1,6 +1,8 @@
-<input type="text" placeholder="Search Planets Here" ng-model="searchText" ng-model-options="{debounce: 1000, updateOn: blur}"></input>
-<div ng-repeat="planet in planets | orderBy: '-population'">
-	<span>{{planet.name}}</span>
-	<span>{{planet.population}}</span>
+<div class="planet-container">
+	<input type="text" placeholder="Search Planets Here" ng-model="searchText" ng-model-options="{debounce: 1000, updateOn: blur}" search-items></input>
+	<div ng-repeat="planet in planets" ng-style="{'width' : (100-$index) + '%'}" class="planet-container">
+		<span>{{planet.name}}</span>
+		<span>{{planet.population}}</span>
+	</div>
 </div>
 
