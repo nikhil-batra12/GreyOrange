@@ -15,5 +15,8 @@
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 -c-1 ./app"
 
+  },
+  "engines": {
+    "node": "8.2.1"
   }
 }
