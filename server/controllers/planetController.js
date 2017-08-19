@@ -10,7 +10,6 @@ function searchPlanet(req,res){
     
     //Get params from request object
     var searchText = req.params['searchText'];
-console.log(searchText)
     var url = CONFIG.URL.SEARCH_PLANET + searchText;
 
 	https.get(url, function(response){
@@ -31,7 +30,6 @@ console.log(searchText)
 
 function getNextSearchResults(req, res){
 	var nextSearchUrl = req.params['nextUrl'];
-	console.log(nextSearchUrl)
 	https.get(nextSearchUrl, function(response){
 	    var body = '';
 

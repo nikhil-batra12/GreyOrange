@@ -22,10 +22,8 @@ function loginUser(req,res){
 
 	    response.on('end', function(){
 	        var loginResponse = JSON.parse(body).results;
-	        console.log(loginResponse)
 	        var userAuthenticated = false;
 	        for(var user=0;user<loginResponse.length;user++){
-	        	console.log(loginResponse[0]);
 	        	if(loginResponse[user].name === username && loginResponse[user].birth_year === password){
 	        		userAuthenticated = true;
 	        		break;

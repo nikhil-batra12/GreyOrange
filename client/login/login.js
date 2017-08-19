@@ -18,6 +18,7 @@ angular.module('myApp.login', ['ui.router'])
 		dataService.authenticateUser($scope.username, $scope.password).then(function(response){
 			$scope.disableSubmit = false;
 			if(!response.data.isError){
+				$scope.$parent.user = response.data;
 				$state.go('dashboard');
 			} else{
 				$scope.invalideCredential = true;
