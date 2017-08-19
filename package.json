@@ -8,15 +8,13 @@
   },
   "scripts": {
     "postinstall": "bower install",
-
     "update-deps": "npm update",
     "postupdate-deps": "bower update",
-
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 -c-1 ./app"
-
   },
   "engines": {
-    "node": "8.2.1"
+    "node": "8.2.1",
+    "npm": "3.10.10"
   }
 }
