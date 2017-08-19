@@ -13,20 +13,6 @@ angular.module('myApp.view2', ['ui.router'])
 
 
 .controller('View2Ctrl', ['$scope', 'searchService', function($scope, searchService) {
-	$scope.$watch('searchText', function(text){
-
-	      console.log(text);
-	      if (!text || text.length == 0)
-	        return 0;
-	        // if searchStr is still the same..
-	        // go ahead and retrieve the data
-	        if (text === $scope.searchText)
-	        {
-	        	$scope.searchResults();
-	        }
-
-	});
-
 	$scope.searchResults = function(){
 		searchService.getSearchResults($scope.searchText).then(function(response){
 			console.log(response.data.results)
@@ -39,14 +25,19 @@ angular.module('myApp.view2', ['ui.router'])
 
 .directive('searchItems', function () {
 	return{
-		scope:{
-			action: '&'
-		},
 		link: function(scope, element, attrs) {
-        	element.bind("keypress", function (event) {   
-        		console.log('Captured');
-        		scope.action();
-        	});
+        	scope.$watch('searchText', function(text){
+		        if (!text || text.length == 0)
+		        return 0;
+		        // if searchStr is still the same..
+		        // go ahead and retrieve the data
+		        if (text === scope.searchText)
+		        {
+		        	scope.searchResults();
+		        }
+
+			});
+
 	    }
 	}
 	 	
