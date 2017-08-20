@@ -75,7 +75,8 @@ body {
 /*Dashboard page styles*/
 
 #dashboard-container .logout-button {
-    font-size: 20px;
+    font-size: 22px;
+    padding: 5px 10px;
 }
 #dashboard-container .planet-container,
 #dashboard-container .planet-result {
