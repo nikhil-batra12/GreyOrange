@@ -3,9 +3,9 @@
     "description": "Star wars API handling project.",
     "version": "0.0.1",
     "dependencies": {
-        "angular": "~1.5.0",
+        "angular": "1.5.0",
         "angular-ui-router": "0.2.11",
-        "bootstrap": "*",
-        "ngstorage": "^0.3.11"
+        "bootstrap": "3.3.0",
+        "ngstorage": "0.3.11"
     }
 }
