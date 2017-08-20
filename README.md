@@ -20,3 +20,7 @@ The app is deployed on heroku and can be accessed using the url "http://nikhil-g
 - By default, first 10 search results of planets is shown. User can get more results by clicking "Get More Resuts" button.
 - User can refresh "Dashboard" page and will be logged in using data stored in localstorage.
 - User can log out of app using "Log out" button on top right corner.
+
+## Login Credentials
+- Luke Skywalker/19BBY
+- R2-D2/33BBY
