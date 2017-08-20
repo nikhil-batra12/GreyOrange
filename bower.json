@@ -1,11 +1,11 @@
 {
-  "name": "grey-orange-assignemtn",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.1",
-  "dependencies": {
-    "angular": "~1.5.0",
-    "angular-ui-router":  "0.2.11",
-    "bootstrap": "*",
-    "angular-loader": "~1.5.0"
-  }
+    "name": "grey-orange-assignment",
+    "description": "Star wars API handling project.",
+    "version": "0.0.1",
+    "dependencies": {
+        "angular": "~1.5.0",
+        "angular-ui-router": "0.2.11",
+        "bootstrap": "*",
+        "ngstorage": "^0.3.11"
+    }
 }

@@ -1,20 +1,20 @@
 {
-  "name": "grey-orange-assignemtn",
-  "version": "0.0.1",
-  "description": "A starter project for AngularJS",
-  "dependencies": {
-    "body-parser": "^1.17.2",
-    "bower": "1.7.7",
-    "express": "4.10.4",
-    "http-server": "0.9.0"
-  },
-  "scripts": {
-    "postinstall": "bower install",
-    "prestart": "npm install",
-    "start": "node app.js"
-  },
-  "engines": {
-    "node": "6.11.2",
-    "npm": "5.3.0"
-  }
+    "name": "grey-orange-assignment",
+    "version": "0.0.1",
+    "description": "Star wars API handling project.",
+    "dependencies": {
+        "body-parser": "1.17.2",
+        "bower": "1.7.7",
+        "express": "4.10.4",
+        "express-rate-limit": "2.9.0"
+    },
+    "scripts": {
+        "postinstall": "bower install",
+        "prestart": "npm install",
+        "start": "node app.js"
+    },
+    "engines": {
+        "node": "6.11.2",
+        "npm": "5.3.0"
+    }
 }

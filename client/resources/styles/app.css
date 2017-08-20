@@ -73,6 +73,7 @@ body{
 
 .planet-container{
     margin-top: 25px;
+    border: none;
 }
 
 .planet-result{
@@ -86,4 +87,10 @@ body{
   cursor: pointer;
   text-align: center;
   color: lightgreen;
+}
+
+.logout-button{
+    font-size : 20px;
+    color: white;
+    cursor: pointer;
 }
