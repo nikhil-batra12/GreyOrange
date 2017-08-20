@@ -1,19 +1,19 @@
-<div class="login-form-container col-sm-offset-3 col-sm-6">
+<div id="sw-login-form-container" class="col-sm-offset-3 col-sm-6">
     <div class="content-container">
-        <h1>Sign In</h1>
+        <h1 class="text-center">Sign In</h1>
         <form name="loginForm" ng-submit="login()" novalidate>
             <div class="username-container">
                 <input name="username" ng-model="username" required placeholder="Enter your Id">
-                <span class="required-validation-message" ng-show="loginForm.username.$touched && loginForm.username.$invalid">*Required</span>
+                <span class="required-validation-message color-red" ng-show="loginForm.username.$touched && loginForm.username.$invalid">*Required</span>
             </div>
             <div class="password-container">
                 <input name="password" ng-model="password" required placeholder="Enter your Password" type="password">
-                <span class="required-validation-message" ng-show="loginForm.password.$touched && loginForm.password.$invalid">*Required</span>
+                <span class="required-validation-message color-red" ng-show="loginForm.password.$touched && loginForm.password.$invalid">*Required</span>
             </div>
             <button id='submitButton' type="submit" class="btn btn-primary btn-lg" ng-class="{'disabled': disableSubmit}">
                 SIGN IN
             </button>
-            <div data-ng-show="invalideCredential" class="invalidCredential">
+            <div data-ng-show="invalideCredential text-center" class="invalidCredential">
                 {{errorMessage}}
             </div>
         </form>

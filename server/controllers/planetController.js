@@ -1,13 +1,17 @@
+/* External dependecies*/
 var https = require('https');
+
+/* Config where urls are stored*/
 var CONFIG = require('../config');
 
-
-/************************************
+/*
  * Module exports / Public functions
- ************************************/
+ */
+
 exports.searchPlanet = searchPlanet;
 exports.getNextSearchResults = getNextSearchResults;
 
+//Search a planet
 function searchPlanet(req, res) {
 
     //Get params from request object
@@ -30,6 +34,7 @@ function searchPlanet(req, res) {
     });
 };
 
+// Get next seacrh results
 function getNextSearchResults(req, res) {
     var nextSearchUrl = req.params['nextUrl'];
     https.get(nextSearchUrl, function(response) {

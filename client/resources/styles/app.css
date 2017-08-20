@@ -1,96 +1,97 @@
 /* app css stylesheet */
-html, body{
-	height: 100%;
-	width: 100%;
+
+/*Common styles fo all Pages*/
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background: url(../img/background-star-wars.jpg) center center repeat;
+    overflow: auto;
 }
 
-body{
-	background: url(../img/background-star-wars.jpg) center center repeat;
-  overflow: auto;
+/*Generic classes*/
+.color-red{
+    color: red;
 }
-.page-container{
+.color-white{
+    color: white;
+}
+.text-center{
+    text-align: center;
+}
+.pointer{
+    cursor: pointer;
+}
+/*Main layout styles*/
+.page-container {
     margin-left: 0;
 }
-.login-form-container{
+
+/*Login page styles*/
+
+#sw-login-form-container {
     margin-top: 15%;
 }
-
-@media screen and (min-width : 768px) and (max-width: 1024px) and (orientation: portrait){
-    .login-form-container{
-        margin-top: 30%;
-    }
-}
-
-.content-container{
-    background-color: rgba(0,0,0,0.6);
+#sw-login-form-container .content-container {
+    background-color: rgba(0, 0, 0, 0.6);
     margin: 0 auto;
     padding: 20px;
     max-width: 600px;
 }
-
-.login-form-container h1{
+#sw-login-form-container .content-container h1 {
     color: #fff;
-    text-align: center;
 }
-
-
-.login-form-container input{
+#sw-login-form-container .content-container input {
     margin: 10px 0 0 0;
     padding: 10px;
     border-radius: 10px;
     width: 100%;
 }
-
-.login-form-container .required-validation-message{
-    color: red;
+#sw-login-form-container .required-validation-message {
     display: block;
     margin: 5px 0 0 10px;
 }
-
-#submitButton{
+#sw-login-form-container #submitButton {
     margin-top: 20px;
     width: 100%;
     border-radius: 10px;
 }
-
-.username-container, .password-container{
+#sw-login-form-container .username-container,
+#sw-login-form-container .password-container {
     padding-bottom: 5px;
 }
-
-.invalidCredential{
-    color: red;
-    text-align: center;
+#sw-login-form-container .invalidCredential {
     padding-top: 10px;
 }
-
-.planet-container, .planet-result{
-    border: 1px solid white;
-    color: white;
-    font-size: 30px;
-    background-color: rgba(0,0,0,0.6);
-    padding: 0;
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    #sw-login-form-container {
+        margin-top: 40%;
+    }
 }
 
-.planet-container{
+
+/*Dashboard page styles*/
+
+#dashboard-container .logout-button {
+    font-size: 20px;
+}
+#dashboard-container .planet-container,
+#dashboard-container .planet-result {
+    border: 1px solid white;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0;
+}
+#dashboard-container .planet-container {
     margin-top: 25px;
     border: none;
 }
-
-.planet-result{
-  text-align: center;
+#dashboard-container .planet-container input {
+    color: black;
 }
-.planet-container input{
-  color: black;
-}
-.get-more-results{
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  color: lightgreen;
-}
-
-.logout-button{
-    font-size : 20px;
-    color: white;
-    cursor: pointer;
+#dashboard-container .get-more-results {
+    font-size: 24px;
+    color: lightgreen;
 }
