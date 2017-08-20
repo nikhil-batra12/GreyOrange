@@ -1,9 +1,9 @@
 <div id="dashboard-container">
-	<div class="logout-button pull-right pointer" ng-click="logout()">
+	<div class="logout-button pull-right pointer color-white" ng-click="logout()">
 	   Log Out
 	</div>
 	<div class="planet-container col-xs-12">
-	   <span class="col-xs-6">Hello {{user.name}}, search your planet</span>
+	   <span class="col-xs-6 color-white">Hello {{user.name}}, search your planet</span>
 	   <input type="text" class="col-sm-6" placeholder="Type Here" ng-model="searchText" ng-model-options="{debounce: 300, updateOn: blur}" search-items></input>
 	</div>
 	<div class="results-count planet-result text-center color-white col-xs-12" ng-show="planets.length && searched">
